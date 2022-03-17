@@ -61,15 +61,9 @@ Your browser does not support the audio element.
 <script>
     const homme = ['ana','anwar','abdelkader','fares', 'khalil', 'rachid'];
     const femme= ['assia', 'abir', 'halima', 'nouha', 'amira', 'amani', 'afef', 'hafida', 'sara', 'amjad', 'rayane', 'nour'];
-    const mix = homme.concat(femme);
+    const mix = femme.concat(homme);
     
-        var hikm = [{
-    question: "ناس هابلة عليها",
-    choices: femme,
-}, {
-    hikma: "مريول ووحدة وماداته فيه",
-    choices: homme
-    },  {
+        var hikm = [ {
     hikma: "تكمل حياتها بايرة",
     choices: femme
     }, {
@@ -81,8 +75,23 @@ Your browser does not support the audio element.
     }, {
     hikma: "العاقلة والمليحة تع الكلاصة",
     choices: femme
+    },{
+    question: "ناس هابلة عليها",
+    choices: femme,
+}, {
+    hikma: "مريول ووحدة وماداته فيه",
+    choices: homme
     }, {
-    hikma: "القراية كون جات بنادم",
+    hikma: " كون تنحيلو الستيلو يبكو هي ولاهو",
+    choices: mix
+    }, {
+    hikma: "  هو ولا هي كي يكمل القراية يجاجي سارجان شاف",
+    choices: mix
+    },{
+    hikma: "ماماه طلقت باباه هو ولا هي",
+    choices: mix
+    }, {
+    hikma: "تاكل برا وميعرضش صحابو هو ولاهي",
     choices: mix
     }, {
     hikma: "لي محبتش تمدلك نيمروها ",
@@ -97,23 +106,17 @@ Your browser does not support the audio element.
     hikma: "العميقة تع الكلاصة",
     choices: femme
     }, {
-    hikma: "العميق تع الكلاصة",
+    hikma: " يبغي ولاتبغي تقلاش وميخدمش عليه",
     choices: homme
     },{
-    hikma: "كون تتلاقاها برا تعنقها",
+    hikma: "معندهاش زهر في الرجال",
     choices: femme
     }, {
-    hikma: " نهار كومبلي يسلف وميخلص كريدي لي عليه",
-    choices: homme
+    hikma: " عندو ولا عندها جفاف عاطفي",
+    choices: mix
     },{
     hikma: " كون تتلاقايه تقوليلو صاحبتك خاينة",
     choices: homme
-    },{
-    hikma: " كون تنحيلو الستيلو يبكو هي ولاهو",
-    choices: mix
-    },{
-    hikma: "ماماه طلقت باباه هو ولا هي",
-    choices: mix
     }]; // 0(n)
     let randomHikma = hikm[Math.floor(Math.random() * hikm.length)];
     let randomPerInChoice =   Math.floor(Math.random()*randomHikma.choices.length);
